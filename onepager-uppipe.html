@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UpPipe — One Pager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cobalt:#1A56FF;--cobalt-deep:#0D3FBF;--cobalt-navy:#082BAA;--lime:#C8FF00;--cream:#FDFBF7;--white:#fff;--dark:#0F1424;--mid:#6B7280;--border:#E8E8E8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#555;color:var(--dark);-webkit-font-smoothing:antialiased;}
+.page{width:1080px;margin:0 auto;background:var(--cream);}
+.hero{background:linear-gradient(155deg,#0A1A4D 0%,#0D3FBF 45%,#1A56FF 100%);padding:52px 56px 44px;color:#fff;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:auto -10% -40% 40%;height:70%;background:radial-gradient(ellipse at center,rgba(26,86,255,0.55),transparent 65%);}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:62px;line-height:0.82;letter-spacing:-0.045em;}
+.logo .p{display:block;margin-left:52px;}
+.logo .sub{display:block;margin-left:52px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.02em;margin-top:5px;}
+.hero h1{font-family:'Syne',sans-serif;font-size:50px;font-weight:800;line-height:1.04;letter-spacing:-0.032em;margin-top:40px;}
+.hero h1 .lime{color:var(--lime);}
+.pills{display:flex;align-items:center;gap:14px;margin-top:30px;position:relative;z-index:2;}
+.pill{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.14em;padding:13px 26px;border-radius:100px;white-space:nowrap;}
+.pill.a{background:rgba(255,255,255,0.1);border:1.5px solid rgba(255,255,255,0.45);color:#fff;}
+.pill.b{background:var(--lime);color:var(--dark);box-shadow:0 0 34px rgba(200,255,0,0.4);}
+.pills .dash{width:26px;height:1.5px;background:rgba(255,255,255,0.5);flex-shrink:0;}
+.limebar{height:9px;background:var(--lime);}
+.body{padding:34px 42px 30px;display:flex;flex-direction:column;gap:17px;}
+.card{background:var(--white);border-radius:22px;padding:30px 34px;box-shadow:0 2px 14px rgba(13,63,191,0.05);}
+.ml{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:0.17em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:14px;}
+.card p{font-size:18px;line-height:1.62;color:#3b4254;}
+.card p b{color:var(--cobalt);font-weight:700;}
+.card p strong{color:var(--dark);font-weight:800;}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:17px;}
+.blue{background:linear-gradient(150deg,var(--cobalt) 0%,var(--cobalt-deep) 100%);color:#fff;}
+.blue .ml{color:rgba(255,255,255,0.8);}
+.blue .big{font-family:'Syne',sans-serif;font-size:62px;font-weight:800;line-height:0.95;letter-spacing:-0.045em;}
+.blue .big span{font-size:21px;letter-spacing:0.08em;color:var(--lime);margin-left:7px;}
+.blue p{color:rgba(255,255,255,0.93);font-size:17px;margin-top:12px;}
+.tagline{display:inline-block;margin-top:17px;background:var(--lime);color:var(--dark);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;padding:9px 17px;border-radius:100px;}
+.soft{background:linear-gradient(150deg,#F3FFCE 0%,#EAF2FF 100%);border:1px solid rgba(26,86,255,0.1);}
+.mark{background:var(--lime);padding:0 5px;border-radius:3px;font-weight:800;color:var(--dark);}
+.lista{list-style:none;display:flex;flex-direction:column;gap:13px;margin-top:4px;}
+.lista li{display:flex;gap:13px;align-items:flex-start;font-size:18px;line-height:1.5;color:#3b4254;}
+.lista li::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--cobalt);flex-shrink:0;margin-top:7px;}
+.lista li strong{color:var(--dark);font-weight:800;}
+.btns{display:flex;flex-direction:column;gap:12px;margin-top:26px;}
+.btn{display:block;text-align:center;font-family:'Syne',sans-serif;font-weight:800;font-size:23px;padding:21px;border-radius:100px;text-decoration:none;letter-spacing:-0.015em;}
+.btn.azul{background:var(--cobalt);color:#fff;}
+.btn.lima{background:var(--lime);color:var(--dark);}
+.clientes{padding:8px 42px 34px;}
+.clientes .ml{margin-bottom:22px;}
+.logos{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;}
+.logos img{height:40px;width:auto;object-fit:contain;opacity:0.9;}
+.logos .nombre{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#2b3245;letter-spacing:-0.02em;}
+.foot{background:var(--dark);color:#8a90a0;text-align:center;padding:24px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.17em;text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <div class="logo">up<span class="p">pipe</span><span class="sub">CreativeOps</span></div>
+    <h1>Más producción creativa.<br><span class="lime">Gestionada y expandida<br>a demanda.</span></h1>
+    <div class="pills">
+      <span class="pill a">AI OPERATIONAL INPUT</span>
+      <span class="dash"></span>
+      <span class="pill b">HUMAN CREATIVE OUTPUT</span>
+    </div>
+  </div>
+  <div class="limebar"></div>
+
+  <div class="body">
+
+    <div class="card">
+      <span class="ml">Qué es</span>
+      <p>UpPipe <strong>administra y amplía el pipeline de la producción creativa de los equipos internos de mercadeo.</strong> El software con el que tu equipo trabaja adentro — y una <b>red de creativos senior</b> que entra cuando tu equipo llega a su tope, <b>sin contratar nómina</b>.</p>
+    </div>
+
+    <div class="duo">
+      <div class="card blue">
+        <span class="ml">Qué entregamos</span>
+        <div class="big">24-48 <span>HORAS</span></div>
+        <p>Todo tipo de piezas: video, branding, motion, packaging, UI, editorial y contenido.</p>
+        <span class="tagline">+15 disciplinas expertas</span>
+      </div>
+      <div class="card soft">
+        <span class="ml">Cómo empiezas</span>
+        <p>Con un <span class="mark">piloto gratis de 20 horas</span> de producción real para liberar tus cuellos de botella, con todas las funciones de la plataforma disponibles.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="ml">Después del piloto sabes</span>
+      <ul class="lista">
+        <li>Tus <strong>métricas reales de producción</strong>.</li>
+        <li><strong>Cuándo tu equipo llega a su tope</strong>, antes de que pase.</li>
+        <li>Un <strong>estimado de la bolsa anual</strong> de horas que necesitas.</li>
+        <li>Cuánto te puedes <strong>ahorrar</strong> cubriendo tus picos con UpPipe.</li>
+      </ul>
+      <div class="btns">
+        <a class="btn azul" href="https://deck.uppipe.co">Conoce más · deck.uppipe.co</a>
+        <a class="btn lima" href="https://wa.me/573163807993">WhatsApp 316 380 7993</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="clientes">
+    <span class="ml">Scaleups que ya producen con UpPipe</span>
+    <div class="logos">
+      <span class="nombre">Bold</span>
+      <img src="galgo.png" alt="Galgo">
+      <span class="nombre">HealthAtom</span>
+      <span class="nombre">Symplifica</span>
+      <span class="nombre">Skala</span>
+    </div>
+  </div>
+
+  <div class="foot">uppipe.co &nbsp;·&nbsp; hello@uppipe.io</div>
+</div>
+</body>
+</html>
