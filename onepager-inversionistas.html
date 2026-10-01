@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UpPipe — One Pager para inversionistas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cobalt:#1A56FF;--cobalt-deep:#0D3FBF;--cobalt-navy:#082BAA;--lime:#C8FF00;--cream:#FDFBF7;--white:#fff;--dark:#0F1424;--mid:#6B7280;--border:#E8E8E8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#555;color:var(--dark);-webkit-font-smoothing:antialiased;}
+.page{width:1080px;margin:0 auto;background:var(--cream);}
+.hero{background:linear-gradient(155deg,#0A1A4D 0%,#0D3FBF 45%,#1A56FF 100%);padding:52px 56px 44px;color:#fff;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:auto -10% -40% 40%;height:70%;background:radial-gradient(ellipse at center,rgba(26,86,255,0.55),transparent 65%);}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:62px;line-height:0.82;letter-spacing:-0.045em;}
+.logo .p{display:block;margin-left:52px;}
+.logo .sub{display:block;margin-left:52px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.02em;margin-top:5px;}
+.hero h1{font-family:'Syne',sans-serif;font-size:50px;font-weight:800;line-height:1.04;letter-spacing:-0.032em;margin-top:40px;}
+.hero h1 .lime{color:var(--lime);}
+.pills{display:flex;align-items:center;gap:14px;margin-top:30px;position:relative;z-index:2;}
+.pill{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.14em;padding:13px 26px;border-radius:100px;white-space:nowrap;}
+.pill.a{background:rgba(255,255,255,0.1);border:1.5px solid rgba(255,255,255,0.45);color:#fff;}
+.pill.b{background:var(--lime);color:var(--dark);box-shadow:0 0 34px rgba(200,255,0,0.4);}
+.pills .dash{width:26px;height:1.5px;background:rgba(255,255,255,0.5);flex-shrink:0;}
+.limebar{height:9px;background:var(--lime);}
+.body{padding:34px 42px 30px;display:flex;flex-direction:column;gap:17px;}
+.card{background:var(--white);border-radius:22px;padding:30px 34px;box-shadow:0 2px 14px rgba(13,63,191,0.05);}
+.ml{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:0.17em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:14px;}
+.card p{font-size:18px;line-height:1.62;color:#3b4254;}
+.card p b{color:var(--cobalt);font-weight:700;}
+.card p strong{color:var(--dark);font-weight:800;}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:17px;}
+.blue{background:linear-gradient(150deg,var(--cobalt) 0%,var(--cobalt-deep) 100%);color:#fff;}
+.blue .ml{color:rgba(255,255,255,0.8);}
+.blue .big{font-family:'Syne',sans-serif;font-size:62px;font-weight:800;line-height:0.95;letter-spacing:-0.045em;}
+.blue .big span{font-size:21px;letter-spacing:0.08em;color:var(--lime);margin-left:7px;}
+.blue p{color:rgba(255,255,255,0.93);font-size:17px;margin-top:12px;}
+.tagline{display:inline-block;margin-top:17px;background:var(--lime);color:var(--dark);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;padding:9px 17px;border-radius:100px;}
+.soft{background:linear-gradient(150deg,#F3FFCE 0%,#EAF2FF 100%);border:1px solid rgba(26,86,255,0.1);}
+.mark{background:var(--lime);padding:0 5px;border-radius:3px;font-weight:800;color:var(--dark);}
+.lista{list-style:none;display:flex;flex-direction:column;gap:13px;margin-top:4px;}
+.lista li{display:flex;gap:13px;align-items:flex-start;font-size:18px;line-height:1.5;color:#3b4254;}
+.lista li::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--cobalt);flex-shrink:0;margin-top:7px;}
+.lista li strong{color:var(--dark);font-weight:800;}
+.btns{display:flex;flex-direction:column;gap:12px;margin-top:26px;}
+.btn{display:block;text-align:center;font-family:'Syne',sans-serif;font-weight:800;font-size:23px;padding:21px;border-radius:100px;text-decoration:none;letter-spacing:-0.015em;}
+.btn.azul{background:var(--cobalt);color:#fff;}
+.btn.lima{background:var(--lime);color:var(--dark);}
+.clientes{padding:8px 42px 34px;}
+.clientes .ml{margin-bottom:22px;}
+.logos{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;}
+.logos img{height:40px;width:auto;object-fit:contain;opacity:0.9;}
+.logos .nombre{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#2b3245;letter-spacing:-0.02em;}
+.foot{background:var(--dark);color:#8a90a0;text-align:center;padding:24px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.17em;text-transform:uppercase;}
+
+.inv .hero h1{font-size:46px;}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-top:17px;}
+.kpi{background:var(--white);border-radius:16px;padding:19px 17px;text-align:center;border:1px solid var(--border);}
+.kpi .v{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:var(--cobalt-deep);line-height:1;letter-spacing:-0.035em;}
+.kpi .l{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-top:8px;line-height:1.5;}
+.kpi.verde{background:linear-gradient(145deg,#EFFFB0,#E8EFFE);border-color:rgba(26,86,255,0.14);}
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:17px;}
+.f{background:var(--white);border-radius:22px;padding:28px 30px;border:1px solid var(--border);}
+.f .rol{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--cobalt);margin-bottom:9px;}
+.f .nom{font-family:'Syne',sans-serif;font-size:25px;font-weight:800;letter-spacing:-0.025em;margin-bottom:11px;}
+.f p{font-size:15.5px;line-height:1.6;color:#3b4254;}
+.fases{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:16px;}
+.fase{border-radius:16px;padding:20px 18px;border:1px solid var(--border);background:var(--white);}
+.fase .t{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--cobalt);margin-bottom:10px;}
+.fase .n{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;color:var(--cobalt-deep);line-height:1;margin-bottom:9px;}
+.fase ul{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.fase li{font-size:13.5px;line-height:1.45;color:#3b4254;}
+.fase.firmados{background:linear-gradient(145deg,#EFFFB0,#F7FFE0);border-color:rgba(26,86,255,0.14);}
+.ask{background:linear-gradient(150deg,var(--cobalt-navy),var(--cobalt-deep));color:#fff;border-radius:22px;padding:32px 34px;}
+.ask .ml{color:var(--lime);}
+.ask .cifra{font-family:'Syne',sans-serif;font-size:50px;font-weight:800;line-height:1;letter-spacing:-0.04em;}
+.ask p{color:rgba(255,255,255,0.92);font-size:16px;line-height:1.62;margin-top:13px;}
+.ask p b{color:var(--lime);}
+.conf{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mid);text-align:center;padding:14px 0 0;}
+</style>
+</head>
+<body>
+<div class="page inv">
+
+  <div class="hero">
+    <div class="logo">up<span class="p">pipe</span><span class="sub">CreativeOps</span></div>
+    <h1>El equipo de marketing<br><span class="lime">nunca tiene que decirle<br>que no al crecimiento.</span></h1>
+    <div class="pills"><span class="pill a">PRE-SEED 2026</span><span class="dash"></span><span class="pill b">US$800K</span></div>
+  </div>
+  <div class="limebar"></div>
+
+  <div class="body">
+
+    <div class="card"><span class="ml">El problema</span>
+      <p>Cuando una empresa quiere crecer, <strong>el equipo de marketing es lo primero que se frena.</strong> Entre el 35% y el 40% del trabajo llega en picos que un equipo de tamaño fijo no puede absorber: el mes pico de una marca es <b>3,5 veces su mes promedio</b>. Ese cuello de botella no aparece en ningún estado financiero. Se ve en la campaña que salió tarde y en el lanzamiento que se corrió. <strong>Y la campaña que no salió es la venta que no se hizo.</strong></p></div>
+
+    <div class="card"><span class="ml">Qué resolvemos</span>
+      <p>Dos cosas: <strong>el software para administrar la producción creativa interna</strong>, y <strong>la capacidad senior para expandirla cuando no alcanza.</strong> El equipo del cliente trabaja dentro de la plataforma; cuando llega a su tope, deriva el pedido a una red de creativos senior sin contratar nómina. Todo bajo la misma infraestructura, con entrega entre 24 y 48 horas.</p></div>
+
+    <div class="card blue"><span class="ml">El valor agregado · Creative Intelligence</span>
+      <p style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;line-height:1.2;letter-spacing:-0.025em;color:#fff;margin-bottom:12px;">Business intelligence, pero para la producción creativa.</p>
+      <p>El sistema calcula cuántas horas toma cada pieza <b>antes de empezarla</b>. El motor detrás son <b>14 años midiendo cada hora de trabajo creativo</b>: más de 800.000 data points, 86.000 horas, 147 clientes en 20 países. No es código: es historia. Por eso no se replica levantando capital.</p></div>
+
+    <div class="founders">
+      <div class="f"><div class="rol">Fundadora · comercial y operación</div><div class="nom">Olga Lucía Rodríguez</div>
+        <p>Publicidad en Lowe SSP3. Montó su agencia en 2012 con una decisión que nadie aplicaba en Colombia: <strong>cobrar por horas medidas</strong>. Dos años después cerró el contrato de Uber para toda América Latina, que operó cinco años con picos de 3.312 horas en un mes y catorce países en simultáneo.</p></div>
+      <div class="f"><div class="rol">Fundador · producto y finanzas</div><div class="nom">Alberto McAllister</div>
+        <p>Diecisiete años gerenciando una exportadora de flores. Entró en 2015 a construir los sistemas que hicieron operable la cuenta de Uber en diecisiete países, conectando la operación con las finanzas. En 2026 <strong>construyó la plataforma él mismo, con inteligencia artificial, en cinco meses y sin equipo de desarrollo.</strong></p></div>
+    </div>
+
+    <div class="card"><span class="ml">Tracción · febrero – octubre 2026</span>
+      <div class="kpis">
+        <div class="kpi"><div class="v">14</div><div class="l">Pilotos<br>corridos</div></div>
+        <div class="kpi"><div class="v">6</div><div class="l">Pilotos<br>en plan</div></div>
+        <div class="kpi"><div class="v">260</div><div class="l">Horas/mes<br>contratadas</div></div>
+        <div class="kpi verde"><div class="v">75%</div><div class="l">Conversión<br>piloto → plan</div></div>
+      </div>
+      <div class="fases">
+        <div class="fase firmados"><div class="t">Ya en plan</div><div class="n">6</div><ul><li>Galgo · 95 h</li><li>Prodesa Colombia y Rep. Dominicana · 50 h</li><li>Casa Marina Real · 40 h</li><li>Bold · 40 h</li><li>Skala · 35 h</li></ul></div>
+        <div class="fase"><div class="t">En piloto ahora</div><div class="n">6</div><ul><li>Grupo Pash (PatPrimo, Ostu, Atomos, Seven Seven)</li><li>HealthAtom</li><li>Symplifica</li><li>Laika</li><li>Crop Consultora</li><li>Applied AI</li></ul></div>
+        <div class="fase"><div class="t">Pilotos por arrancar</div><div class="n">5</div><ul><li>Bacu</li><li>Muncher</li><li>Bavaria</li><li>Vitad</li><li>Novartis</li></ul></div>
+      </div>
+      <p style="margin-top:18px;font-size:15px;line-height:1.6;color:#3b4254;">Cuatro de los seis planes son anuales. <strong>25 creativos senior conectados</strong> a la plataforma. Y el canal ya está probado: <strong>UpPipe es beneficio para las scaleups de Endeavor y los clientes de Efectimedios</strong>, con tarifa preferencial.</p></div>
+
+    <div class="ask"><span class="ml">La ronda</span>
+      <div class="cifra">US$800K</div>
+      <p>Pre-seed. Dieciocho meses de runway y breakeven operativo en el mes dieciséis. El primer rol que se contrata es comercial: <b>no financiamos la búsqueda de product-market fit</b>, el piloto convierte y las cuentas se expanden solas.</p>
+      <p style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.18);"><b>Pusimos US$305.000 propios y de familia antes de pedirle un peso a nadie</b>, y los dos fundadores tienen su sueldo aplazado. La compañía opera con utilidad antes de pagarnos.</p></div>
+
+    <div class="btns">
+      <a class="btn azul" href="https://pitchdeck.uppipe.co">Deck completo · pitchdeck.uppipe.co</a>
+      <a class="btn lima" href="mailto:hello@uppipe.io">hello@uppipe.io</a>
+    </div>
+
+    <div class="conf">Confidencial · para destinatarios autorizados · pre-seed 2026</div>
+  </div>
+
+  <div class="foot">uppipe.co &nbsp;·&nbsp; hello@uppipe.io</div>
+</div>
+</body>
+</html>
